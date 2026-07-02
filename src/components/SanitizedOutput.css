@@ -1,0 +1,532 @@
+/* src/components/SanitizedOutput.css */
+.sanitized-output {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 20px 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* ============================================================
+   HEADER
+   ============================================================ */
+.output-header {
+  padding: 14px 20px;
+  background: #f9fafb;
+  border-bottom: 1px solid #e5e7eb;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.header-icon {
+  font-size: 1.1rem;
+  color: #4b5563;
+}
+
+.header-left h3 {
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #111827;
+}
+
+.findings-badge {
+  font-size: 0.7rem;
+  background: #f3f4f6;
+  color: #4b5563;
+  padding: 2px 10px;
+  border-radius: 12px;
+  font-weight: 500;
+  border: 1px solid #e5e7eb;
+}
+
+.header-actions {
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+
+.btn-icon {
+  padding: 4px 12px;
+  background: transparent;
+  border: 1px solid #e5e7eb;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  color: #4b5563;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-family: inherit;
+}
+
+.btn-icon:hover {
+  background: #f3f4f6;
+  border-color: #d1d5db;
+}
+
+.btn-icon.active {
+  background: #f3f4f6;
+  border-color: #9ca3af;
+}
+
+.btn-icon svg {
+  font-size: 0.85rem;
+}
+
+/* ============================================================
+   STATS BAR
+   ============================================================ */
+.stats-bar {
+  display: flex;
+  gap: 20px;
+  padding: 8px 20px;
+  background: #fafbfc;
+  border-bottom: 1px solid #e5e7eb;
+  font-size: 0.75rem;
+  color: #6b7280;
+  flex-wrap: wrap;
+  font-family: ui-monospace, 'Courier New', monospace;
+}
+
+.stats-bar span {
+  padding: 2px 0;
+}
+
+.stats-hint {
+  color: #9ca3af !important;
+}
+
+/* ============================================================
+   OUTPUT BODY
+   ============================================================ */
+.output-body {
+  padding: 16px 20px 20px;
+}
+
+/* ============================================================
+   TEXTO SANITIZADO
+   ============================================================ */
+.sanitized-text-container {
+  background: #f8fafc;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.sanitized-text-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 14px;
+  background: #f1f3f5;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.sanitized-text-label {
+  font-size: 0.7rem;
+  color: #6b7280;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.copy-mini-btn {
+  padding: 2px 10px;
+  background: transparent;
+  border: 1px solid #d1d5db;
+  border-radius: 3px;
+  color: #4b5563;
+  font-size: 0.7rem;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  font-family: inherit;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.copy-mini-btn:hover {
+  background: #e5e7eb;
+}
+
+.sanitized-text {
+  font-family: ui-monospace, 'Courier New', monospace;
+  font-size: 0.8rem;
+  line-height: 1.6;
+  color: #1f2937;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  margin: 0;
+  padding: 14px;
+  max-height: 400px;
+  overflow-y: auto;
+  background: #ffffff;
+}
+
+/* ============================================================
+   FILTER BAR
+   ============================================================ */
+.filter-bar {
+  display: flex;
+  gap: 6px;
+  padding: 10px 0 8px;
+  flex-wrap: wrap;
+  border-top: 1px solid #f3f4f6;
+}
+
+.filter-btn {
+  padding: 4px 12px;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  background: transparent;
+  font-size: 0.7rem;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  color: #6b7280;
+  white-space: nowrap;
+  font-family: inherit;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.filter-btn:hover {
+  background: #f3f4f6;
+  border-color: #d1d5db;
+}
+
+.filter-btn.active {
+  background: #1f2937;
+  border-color: #1f2937;
+  color: #ffffff;
+}
+
+.filter-btn svg {
+  font-size: 0.75rem;
+}
+
+/* ============================================================
+   GROUP ACTIONS
+   ============================================================ */
+.group-actions {
+  display: flex;
+  gap: 6px;
+  padding: 4px 0 12px;
+}
+
+.group-action-btn {
+  padding: 3px 10px;
+  border: 1px solid #e5e7eb;
+  border-radius: 4px;
+  background: transparent;
+  font-size: 0.7rem;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  color: #6b7280;
+  font-family: inherit;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.group-action-btn:hover {
+  background: #f3f4f6;
+  border-color: #d1d5db;
+}
+
+/* ============================================================
+   FINDINGS CONTAINER
+   ============================================================ */
+.findings-container {
+  border-top: 1px solid #e5e7eb;
+  padding-top: 14px;
+}
+
+.findings-container h4 {
+  margin: 0 0 12px 0;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #6b7280;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* ============================================================
+   FINDINGS GROUPS
+   ============================================================ */
+.findings-groups {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.finding-group {
+  border: 1px solid #e5e7eb;
+  border-radius: 4px;
+  overflow: hidden;
+  background: #fafbfc;
+}
+
+.finding-group-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  background: #ffffff;
+  user-select: none;
+  border-left: 3px solid #d1d5db;
+}
+
+.finding-group-header:hover {
+  background: #f3f4f6;
+}
+
+.group-icon {
+  font-size: 0.6rem;
+  color: #9ca3af;
+  display: flex;
+  align-items: center;
+}
+
+.group-icon-type {
+  font-size: 0.85rem;
+}
+
+.group-label {
+  font-weight: 500;
+  font-size: 0.8rem;
+  color: #1f2937;
+  flex: 1;
+}
+
+.group-count {
+  padding: 1px 8px;
+  border-radius: 10px;
+  font-size: 0.6rem;
+  font-weight: 600;
+  color: white;
+}
+
+.finding-group-items {
+  padding: 6px 12px 12px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  max-height: 350px;
+  overflow-y: auto;
+}
+
+/* ============================================================
+   FINDING ITEM
+   ============================================================ */
+.finding-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 10px;
+  background: #ffffff;
+  border-radius: 3px;
+  font-size: 0.75rem;
+  flex-wrap: wrap;
+  border-left: 2px solid #d1d5db;
+  font-family: ui-monospace, 'Courier New', monospace;
+}
+
+.finding-line {
+  color: #9ca3af;
+  font-size: 0.65rem;
+  min-width: 44px;
+  font-variant-numeric: tabular-nums;
+}
+
+.finding-var {
+  font-weight: 500;
+  color: #4b5563;
+  background: #f3f4f6;
+  padding: 0 6px;
+  border-radius: 2px;
+  font-size: 0.65rem;
+}
+
+.finding-original {
+  color: #991b1b;
+  font-size: 0.7rem;
+  background: #fef2f2;
+  padding: 1px 6px;
+  border-radius: 2px;
+  word-break: break-all;
+  max-width: 280px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.finding-arrow {
+  color: #9ca3af;
+  font-size: 0.6rem;
+}
+
+.finding-replacement {
+  color: #065f46;
+  font-size: 0.7rem;
+  background: #ecfdf5;
+  padding: 1px 6px;
+  border-radius: 2px;
+  font-weight: 500;
+}
+
+/* ============================================================
+   ENV VARS SUMMARY
+   ============================================================ */
+.env-vars-summary {
+  margin-top: 16px;
+  padding-top: 14px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.env-vars-summary h4 {
+  margin: 0 0 8px 0;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #6b7280;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.env-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.env-tag {
+  background: #f3f4f6;
+  color: #1f2937;
+  padding: 1px 8px;
+  border-radius: 3px;
+  font-size: 0.7rem;
+  font-family: ui-monospace, 'Courier New', monospace;
+  border: 1px solid #e5e7eb;
+}
+
+/* ============================================================
+   SCROLLBARS
+   ============================================================ */
+.sanitized-text::-webkit-scrollbar,
+.finding-group-items::-webkit-scrollbar {
+  width: 4px;
+}
+
+.sanitized-text::-webkit-scrollbar-track {
+  background: #f3f4f6;
+  border-radius: 2px;
+}
+
+.sanitized-text::-webkit-scrollbar-thumb {
+  background: #d1d5db;
+  border-radius: 2px;
+}
+
+.sanitized-text::-webkit-scrollbar-thumb:hover {
+  background: #9ca3af;
+}
+
+.finding-group-items::-webkit-scrollbar-track {
+  background: #f3f4f6;
+  border-radius: 2px;
+}
+
+.finding-group-items::-webkit-scrollbar-thumb {
+  background: #d1d5db;
+  border-radius: 2px;
+}
+
+.finding-group-items::-webkit-scrollbar-thumb:hover {
+  background: #9ca3af;
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 768px) {
+  .output-header {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 6px;
+    padding: 12px 16px;
+  }
+
+  .header-actions {
+    justify-content: flex-start;
+  }
+
+  .btn-icon {
+    font-size: 0.7rem;
+    padding: 3px 10px;
+  }
+
+  .filter-bar {
+    padding: 8px 0 4px;
+    gap: 4px;
+  }
+
+  .filter-btn {
+    font-size: 0.65rem;
+    padding: 2px 8px;
+  }
+
+  .finding-item {
+    font-size: 0.7rem;
+    padding: 4px 8px;
+  }
+
+  .finding-original {
+    max-width: 120px;
+  }
+
+  .stats-bar {
+    font-size: 0.7rem;
+    padding: 6px 16px;
+    gap: 12px;
+  }
+
+  .finding-group-header {
+    padding: 6px 10px;
+  }
+
+  .group-label {
+    font-size: 0.75rem;
+  }
+
+  .sanitized-text {
+    font-size: 0.7rem;
+    padding: 10px;
+    max-height: 300px;
+  }
+
+  .sanitized-text-header {
+    padding: 6px 12px;
+  }
+
+  .output-body {
+    padding: 12px 16px 16px;
+  }
+}
